@@ -1,4 +1,4 @@
-﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable< GMKN.Dnn.map_modul.Models.Item >>
+﻿﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<GMKN.Dnn.map_modul.Models.Item>>
 
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers
@@ -25,6 +25,7 @@
                                 <a href="@Url.Action("Delete", "Item", new {itemId = item.ItemId})">@Dnn.LocalizeString("DeleteItem")</a>
                             </div>
                         }
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
                     }
                 </li>
             }

@@ -1,4 +1,4 @@
-﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<GMKN.Dnn.map_modul.Models.Item>
+﻿﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<GMKN.Dnn.map_modul.Models.Item>
 
 @using System.Collections.Generic
 @using DotNetNuke.Web.Mvc.Helpers
@@ -23,6 +23,11 @@
                 <div><label for="itemUser">@Dnn.LocalizeString("lblAssignedUser")</label></div>
                 @Html.DropDownListFor(m => m.AssignedUserId, (IEnumerable<SelectListItem>)ViewBag.Users, "Choose...")
             </div>
+            <div class="dnnFormItem">
+                <div><label for="MapLink">Map link</label></div>
+                @Html.TextBoxFor(m => m.MapLink)
+            </div>
+
             @Html.HiddenFor(m => m.ModuleId)
         </fieldset>
     </div>

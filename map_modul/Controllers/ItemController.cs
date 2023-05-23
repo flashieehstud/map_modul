@@ -59,6 +59,7 @@ namespace GMKN.Dnn.map_modul.Controllers
                 item.CreatedOnDate = DateTime.UtcNow;
                 item.LastModifiedByUserId = User.UserID;
                 item.LastModifiedOnDate = DateTime.UtcNow;
+                item.MapLink = item.MapLink;
 
                 ItemManager.Instance.CreateItem(item);
             }
@@ -70,6 +71,7 @@ namespace GMKN.Dnn.map_modul.Controllers
                 existingItem.ItemName = item.ItemName;
                 existingItem.ItemDescription = item.ItemDescription;
                 existingItem.AssignedUserId = item.AssignedUserId;
+                existingItem.MapLink = item.MapLink;
 
                 ItemManager.Instance.UpdateItem(existingItem);
             }
@@ -86,7 +88,7 @@ namespace GMKN.Dnn.map_modul.Controllers
 
         public ActionResult Teszt()
         {
-            
+
             return View();
         }
     }
