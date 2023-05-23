@@ -1,0 +1,24 @@
+﻿<h3>map_modul</h3>
+<p class="Contributor">
+	kristof pinter <br />
+	<a href="mailto:kristof.pinter@stud.uni-corvinus.hu">kristof.pinter@stud.uni-corvinus.hu</a><br />
+	<a href=dnndev.me>dnndev.me</a><br />
+	This extension was created using <a href="https://www.christoc.com">Christoc's</a> Module Development Templates for DNN.
+</p>
+<hr/>
+<div class="License">
+	<h3>About the map_modul</h3>
+	<p class="Owner">
+		<b>Version CHANGEME</b><br /><br />
+	</p>
+	<p>Description about version.</p>
+	
+	<h4>Bug Fixes</h4>
+	<ul>
+			<li>List</li>
+			<li>of</li>
+			<li>bug</li>
+			<li>fixes</li>
+	</ul>
+	
+</div>
