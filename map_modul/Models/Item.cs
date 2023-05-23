@@ -27,7 +27,7 @@ namespace GMKN.Dnn.map_modul.Models
     [Scope("ModuleId")]
     public class Item
     {
-        
+        public string MapLink { get; set; }
         public int ItemId { get; set; } = -1;
       
         public string ItemName { get; set; }
@@ -41,7 +41,7 @@ namespace GMKN.Dnn.map_modul.Models
       
         public int ModuleId { get; set; }
 
-        public string MapLink { get; set; }
+        
 
        
         public int CreatedByUserId { get; set; } = -1;
