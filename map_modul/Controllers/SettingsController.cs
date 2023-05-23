@@ -29,9 +29,6 @@ namespace GMKN.Dnn.map_modul.Controllers
         [HttpGet]
         public ActionResult Settings()
         {
-            var settings = new Models.Settings();
-            settings.Setting1 = ModuleContext.Configuration.ModuleSettings.GetValueOrDefault("map_modul_Setting1", false);
-            settings.Setting2 = ModuleContext.Configuration.ModuleSettings.GetValueOrDefault("map_modul_Setting2", System.DateTime.Now);
 
             return View(settings);
         }
