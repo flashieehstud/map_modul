@@ -19,15 +19,16 @@ using System.Web.Caching;
 
 namespace GMKN.Dnn.map_modul.Models
 {
-    [TableName("map_modul_Items")]
+    [TableName("Bolt")]
     //setup the primary key for table
-    [PrimaryKey("ItemId", AutoIncrement = true)]
+    [PrimaryKey("boltID", AutoIncrement = true)]
     //configure caching using PetaPoco
     [Cacheable("Items", CacheItemPriority.Default, 20)]
     //scope the objects to the ModuleId of a module on a page (or copy of a module on a page)
     [Scope("ModuleId")]
     public class Item
     {
+        public int boltID { get; set; }
         public string MapLink { get; set; }
         public int openH {get; set; }
 
@@ -35,10 +36,7 @@ namespace GMKN.Dnn.map_modul.Models
 
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string cim { get; set; }
 
-        public string ItemId { get; set; }
-
-        public string ModuleId { get; set; }
     }
 }

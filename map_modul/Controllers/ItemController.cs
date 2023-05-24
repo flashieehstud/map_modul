@@ -30,14 +30,9 @@ namespace GMKN.Dnn.map_modul.Controllers
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
-            var items = ItemManager.Instance.GetItems(ModuleContext.ModuleId);
+            var items = ItemManager.Instance.GetItems();
             return View(items);
         }
 
-        public ActionResult Teszt(int iID)
-        {
-            Item item = ItemManager.Instance.GetItem(iID);
-            return View();
-        }
     }
 }

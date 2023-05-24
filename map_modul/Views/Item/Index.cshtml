@@ -7,5 +7,9 @@
 <div id="Items-@Dnn.ModuleContext.ModuleId">
     <h1>Boltkereső</h1>
     <p>Válaszd ki a hozzád legközelebbi boltot!</p>
-        <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
+    @foreach (var item in Model)
+    {
+         <p>@item.Name</p>
+    }
+    <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
 </div>

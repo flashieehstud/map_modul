@@ -22,7 +22,7 @@ namespace GMKN.Dnn.map_modul.Components
         void CreateItem(Item t);
         void DeleteItem(int itemId, int moduleId);
         void DeleteItem(Item t);
-        IEnumerable<Item> GetItems(int moduleId);
+        IEnumerable<Item> GetItems();
         Item GetItem(int itemId, int moduleId);
         void UpdateItem(Item t);
     }
@@ -53,13 +53,13 @@ namespace GMKN.Dnn.map_modul.Components
             }
         }
 
-        public IEnumerable<Item> GetItems(int moduleId)
+        public IEnumerable<Item> GetItems()
         {
             IEnumerable<Item> t;
             using (IDataContext ctx = DataContext.Instance())
             {
                 var rep = ctx.GetRepository<Item>();
-                t = rep.Get(moduleId);
+                t = rep.Get();
             }
             return t;
         }
