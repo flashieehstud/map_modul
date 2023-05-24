@@ -13,6 +13,7 @@
 using DotNetNuke.Common.Utilities;
 using DotNetNuke.ComponentModel.DataAnnotations;
 using DotNetNuke.Entities.Content;
+using DotNetNuke.Services.Social.Messaging.Exceptions;
 using System;
 using System.Web.Caching;
 
@@ -28,29 +29,16 @@ namespace GMKN.Dnn.map_modul.Models
     public class Item
     {
         public string MapLink { get; set; }
-        public int ItemId { get; set; } = -1;
-      
-        public string ItemName { get; set; }
+        public int openH {get; set; }
 
-      
-        public string ItemDescription { get; set; }
+        public int closeH { get; set; }
 
-        
-        public int AssignedUserId { get; set; }
+        public string Name { get; set; }
 
-      
-        public int ModuleId { get; set; }
+        public string Description { get; set; }
 
-        
+        public string ItemId { get; set; }
 
-       
-        public int CreatedByUserId { get; set; } = -1;
-
-        public int LastModifiedByUserId { get; set; } = -1;
-
-       
-        public DateTime CreatedOnDate { get; set; } = DateTime.UtcNow;
-
-        public DateTime LastModifiedOnDate { get; set; } = DateTime.UtcNow;
+        public string ModuleId { get; set; }
     }
 }
