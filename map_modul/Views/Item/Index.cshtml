@@ -3,6 +3,12 @@
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers
 
+<style>
+    .middle{
+        color:red;
+    }
+</style>
+
 
 <div id="Items-@Dnn.ModuleContext.ModuleId">
     <h1>Boltkereső</h1>
@@ -11,17 +17,28 @@
     {
         <p>@item.Name</p>
     }
-<select name="Bolt" id="asd">
-    @foreach (var item in Model)
-    {
-        <option id="asd" value="@item.boltID">@item.Name</option>
 
-    }
 
-    <div class="gomb">
-        <button class="base frissitesButton">Frissítés</button>
+    <select name="Bolt" id="boltselector" class="left">
+
+        @foreach (var item in Model)
+        {
+            <option id="asd" value="@item.boltID">@item.Name</option>
+        }
+
+    </select>
+    <div>
+        <button id="gomb">Frissít</button>
     </div>
 
-</select>
+    <script type="text/javascript">
+        document.getElementById("gomb").onclick = function () {
+            var id = document.getElementById('boltselector').value;
+            alert(id);
+        }
+    </script>
+
+
+
     <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
 </div>
