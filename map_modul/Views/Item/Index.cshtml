@@ -9,7 +9,19 @@
     <p>Válaszd ki a hozzád legközelebbi boltot!</p>
     @foreach (var item in Model)
     {
-         <p>@item.Name</p>
+        <p>@item.Name</p>
     }
+<select name="Bolt" id="asd">
+    @foreach (var item in Model)
+    {
+        <option id="asd" value="@item.boltID">@item.Name</option>
+
+    }
+
+    <div class="gomb">
+        <button class="base frissitesButton">Frissítés</button>
+    </div>
+
+</select>
     <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
 </div>
