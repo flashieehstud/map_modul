@@ -7,6 +7,11 @@
 <div id="Items-@Dnn.ModuleContext.ModuleId">
     <h1>Boltkereső</h1>
     <p>Válaszd ki a hozzád legközelebbi boltot!</p>
-    @Html.TextBoxFor(m => m.MapLink)
-    <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
+    <p>
+        @foreach (var item in Model)
+        {
+            @///Html.Label(item.MapLink);
+        }
+    </p>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1jh-2B6y37UX23ZEwZxJA_r2-mEL4Ros&ehbc=2E312F" width="640" height="480"></iframe>
 </div>
